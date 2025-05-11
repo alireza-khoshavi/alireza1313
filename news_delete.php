@@ -4,7 +4,7 @@ ob_start(); // شروع بافر خروجی
 include("heder.html");
 
 function connectToDatabase() {
-    $link = mysqli_connect("localhost", "root", "", "onenews");
+    $link = mysqli_connect("localhost", "root", "", "my_database");
     if (!$link) {
         handleError("❌ اتصال به دیتابیس ناموفق بود: " . mysqli_connect_error());
     }

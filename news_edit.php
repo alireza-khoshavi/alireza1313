@@ -1,6 +1,6 @@
 <?php
 include("heder.html");
-$link = mysqli_connect("localhost", "root", "", "onenews");
+$link = mysqli_connect("localhost", "root", "", "my_database");
 if (!$link) {
     die("❌ اتصال به دیتابیس ناموفق بود: " . mysqli_connect_error());
 }

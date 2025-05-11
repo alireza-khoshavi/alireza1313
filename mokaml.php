@@ -197,7 +197,7 @@ include("hed.html");
 
         <!-- خبرهای اضافه شده از دیتابیس -->
         <?php
-        $link = mysqli_connect("localhost", "root", "", "onenews");
+        $link = mysqli_connect("localhost", "root", "", "my_database");
 
         if (!$link) {
             echo "<p class='no-news'>❌ اتصال به دیتابیس ناموفق بود.</p>";

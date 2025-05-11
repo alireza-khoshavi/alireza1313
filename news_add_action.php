@@ -52,7 +52,7 @@ include("heder.html");
 <div class="response-box">
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $link = mysqli_connect("localhost", "root", "", "onenews");
+    $link = mysqli_connect("localhost", "root", "", "my_database");
     if (!$link) {
         echo "<div class='alert alert-danger'>❌ اتصال به دیتابیس ناموفق بود: " . mysqli_connect_error() . "</div>";
         exit;

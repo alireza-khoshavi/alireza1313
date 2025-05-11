@@ -2,7 +2,7 @@
 include("heder.html");
 
 // اتصال به دیتابیس
-$link = new mysqli("localhost", "root", "", "onenews");
+$link = new mysqli("localhost", "root", "", "my_database");
 
 // بررسی اتصال
 if ($link->connect_error) {

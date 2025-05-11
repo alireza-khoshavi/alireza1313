@@ -14,7 +14,7 @@ echo '
 $host = "localhost";
 $username = "root";
 $password = "";
-$dbname = "onenews";
+$dbname = "my_database";
 
 // اتصال به پایگاه داده با PDO
 try {

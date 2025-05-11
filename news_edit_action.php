@@ -3,7 +3,7 @@ include("heder.html");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // اتصال به پایگاه داده
-    $link = mysqli_connect("localhost", "root", "", "onenews");
+    $link = mysqli_connect("localhost", "root", "", "my_database");
     if (!$link) {
         die("❌ خطا در اتصال به دیتابیس: " . mysqli_connect_error());
     }

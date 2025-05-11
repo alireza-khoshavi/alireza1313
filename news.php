@@ -2,7 +2,7 @@
 include("hed.html");
 
 // اتصال به دیتابیس
-$link = new mysqli("localhost", "root", "", "onenews");
+$link = new mysqli("localhost", "root", "", "my_database");
 if ($link->connect_error) {
     die("<div class='alert alert-danger text-center mt-4'>❌ اتصال به دیتابیس با خطا مواجه شد: " . $link->connect_error . "</div>");
 }
