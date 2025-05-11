@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="وبسایت اخبار مکمل - جدیدترین به‌روزرسانی‌ها و اطلاعیه‌ها" />
+  <title>Supplementary News | اخبار مکمل</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #ffeb3b;
+      --bg-dark: #121212;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-color: #e0e0e0;
+      --accent: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(0, 0, 0, 0.85);
+      border-bottom: 2px solid var(--primary-color);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .menu-item a,
+    .brand-name {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .menu-item a:hover,
+    .brand-name:hover {
+      color: var(--primary-color);
+    }
+
+    /* Main */
+    main.container {
+      flex: 1;
+      padding-top: 130px;
+      padding-bottom: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .headline {
+      font-size: 40px;
+      font-weight: 700;
+      background-color: var(--card-bg);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .headline:hover {
+      transform: translateY(-5px);
+    }
+
+    .description {
+      font-size: 20px;
+      margin: 0 auto 30px;
+      line-height: 1.8;
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      color: #ccc;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .news {
+      background-color: var(--card-bg);
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .news:hover {
+      transform: translateY(-5px);
+      background-color: var(--accent);
+    }
+
+    .news h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .news p {
+      font-size: 17px;
+      color: #ddd;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .headline {
+        font-size: 28px;
+      }
+
+      .description,
+      .news p {
+        font-size: 15px;
+      }
+
+      .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .menu-item a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <ul class="menu">
+        <li class="menu-item logo"><span class="brand-name">Supplementary News</span></li>
+        <li class="menu-item"><a href="index.php">خانه</a></li>
+        <li class="menu-item"><a href="news.php">مدیریت</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <p class="description">در این اینجا می‌توانید آخرین اخبار و به‌روزرسانی‌های مهم را  وارد کنید.</p>
+
+    <div class="news">
+      <h2>خبر جدید</h2>
+      <p>لطفا خبر جدیدرا وارد کنید.</p>
+    </div>
+  </main>
+
+</body>
+</html>
+

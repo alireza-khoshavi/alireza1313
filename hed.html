@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neogym</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazir', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    .header_section {
+      background: linear-gradient(145deg, #1a1a1a, #222);
+      box-shadow: 0 0 10px #00ffd5;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      margin: 0 10px;
+      font-weight: 600;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #00ffc3;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    .date-time {
+      font-size: 14px;
+      font-weight: 500;
+      background: rgba(0, 255, 200, 0.1);
+      padding: 5px 15px;
+      border-radius: 8px;
+      margin-right: 20px;
+      box-shadow: 0 0 8px #00ffcc;
+    }
+
+    @media (max-width: 768px) {
+      .date-time {
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.php">خانه</a></li>
+              <li class="nav-item"><a class="nav-link" href="trainers_new.php">مربیان</a></li>
+              <li class="nav-item"><a class="nav-link" href="mindbody.php">ذهن و بدن سالم</a></li>
+              <li class="nav-item"><a class="nav-link" href="comment_page.php">چرا ما؟</a></li>
+              <li class="nav-item"><a class="nav-link" href="mokaml.php">مکمل‌ها</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.php">مدیریت</a></li>
+            </ul>
+
+            <!-- تاریخ و زمان -->
+            <div class="date-time" id="date-time"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function updateDateTime() {
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Tehran'
+      };
+
+      const now = new Date();
+      const formatter = new Intl.DateTimeFormat('fa-IR', options);
+      document.getElementById('date-time').textContent = formatter.format(now);
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

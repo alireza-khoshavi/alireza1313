@@ -1,0 +1,9 @@
+<?php
+include("hed.html");
+?>
+<?php
+include("submitted.html");
+?>
+<?php
+include("foter.html");
+?>

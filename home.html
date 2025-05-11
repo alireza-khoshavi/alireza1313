@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آموزش تناسب اندام</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background-color: #121212;
+      color: #f4f4f4;
+      margin: 0;
+    }
+
+    .video_section {
+      background-color: #000;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .video_section h2, .video_section h3 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ff4081;
+    }
+
+    .video_section p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2rem;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .fitness-tips-section {
+      background-color: #1a1a1a;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .fitness-tips-section h2 {
+      font-size: 2.5rem;
+      color: #ff4081;
+      margin-bottom: 30px;
+    }
+
+    .fitness-tip {
+      background-color: #333;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .fitness-tip:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .fitness-tip h4 {
+      color: #ff4081;
+      margin-bottom: 10px;
+    }
+
+    .fitness-tip p {
+      color: #ccc;
+    }
+
+    #chatbot {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background-color: #ff4081;
+      padding: 12px 20px;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    #chatbot:hover {
+      background-color: #e60073;
+      transform: scale(1.05);
+    }
+
+    #chatbox {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 15px;
+      width: 300px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      z-index: 999;
+    }
+
+    #chat-content {
+      height: 250px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      background: #111;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    #chat-input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+
+    #send-message {
+      width: 100%;
+      margin-top: 8px;
+      background-color: #ff4081;
+      border: none;
+      padding: 10px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .chat-message {
+      margin-bottom: 10px;
+    }
+
+    .user-message {
+      color: #ff4081;
+    }
+
+    .bot-message {
+      background: #444;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fitness Tips -->
+  <section class="fitness-tips-section">
+    <h2>نکات کلیدی تناسب اندام</h2>
+
+    <div class="fitness-tip"><h4>۱. تمرکز بر تمرینات قدرتی</h4><p>تمرینات قدرتی به ساخت عضله و بهبود آمادگی کمک می‌کند. همه گروه‌های عضلانی را در برنامه خود بگنجانید.</p></div>
+    <div class="fitness-tip"><h4>۲. تغذیه مهم است</h4><p>تغذیه مناسب انرژی شما را تأمین و روند ریکاوری را تسریع می‌کند.</p></div>
+    <div class="fitness-tip"><h4>۳. استمرار کلید موفقیت است</h4><p>با پیوستگی در تمرین، نتایج بهتری خواهید گرفت.</p></div>
+    <div class="fitness-tip"><h4>۴. بهبود و استراحت را فراموش نکنید</h4><p>خواب کافی، آب، و استراحت برای رشد عضلات ضروری‌اند.</p></div>
+    <div class="fitness-tip"><h4>۵. هیدراته بمانید</h4><p>نوشیدن آب کافی باعث افزایش انرژی و کاهش خستگی می‌شود.</p></div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video_section">
+    <h2>تماشای ویدیو آموزشی</h2>
+    <h3>FITNESS TRAINING</h3>
+    <p>با مربیان حرفه‌ای در زمینه‌های مختلف ورزشی همراه شوید و به هدف خود برسید.</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/hlcVW_YsVyM" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Chatbot Button -->
+  <div id="chatbot">چت با ما</div>
+
+  <!-- Chatbox -->
+  <div id="chatbox">
+    <h6 style="color:#ff4081;">بات ورزشی</h6>
+    <div id="chat-content"></div>
+    <input type="text" id="chat-input" placeholder="سؤالی دارید؟">
+    <button id="send-message">ارسال</button>
+  </div>
+
+  <!-- JS -->
+  <script>
+    document.getElementById('chatbot').addEventListener('click', function() {
+      document.getElementById('chatbot').style.display = 'none';
+      document.getElementById('chatbox').style.display = 'block';
+      document.getElementById('chat-content').innerHTML += "<div class='chat-message bot-message'>سلام! در مورد ورزش یا تغذیه هر سؤالی داری بپرس.</div>";
+    });
+
+    document.getElementById('send-message').addEventListener('click', function () {
+      const input = document.getElementById('chat-input');
+      const content = document.getElementById('chat-content');
+      const message = input.value.trim();
+
+      if (message) {
+        content.innerHTML += "<div class='chat-message user-message'>شما: " + message + "</div>";
+        input.value = "";
+
+        setTimeout(() => {
+          content.innerHTML += "<div class='chat-message bot-message'>پیشنهاد من اینه که روزی حداقل ۳۰ دقیقه فعالیت داشته باشی!</div>";
+          content.scrollTop = content.scrollHeight;
+        }, 800);
+      }
+    });
+  </script>
+
+</body>
+</html>

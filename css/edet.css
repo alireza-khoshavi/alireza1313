@@ -1,0 +1,126 @@
+
+.images{
+    background-size: cover; /* تصویر را کشیده تا کل صفحه را پر کند */
+    background-repeat: no-repeat; /* از تکرار جلوگیری می‌کند */
+    background-position: center; /* مرکز تصویر را نشان می‌دهد */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh; /* ارتفاع کل صفحه */
+  
+    
+}
+        /* کانتینر برای باکس‌ها */
+        .box-container {
+            display: flex;
+            flex-wrap: wrap; /* اگر فضا کم باشد، باکس‌ها به خط بعدی می‌روند */
+            gap: 20px; /* فاصله بین باکس‌ها */
+            max-width: 90%; /* محدودیت عرض کانتینر */
+           justify-content:center; /* چیدمان وسط‌چین افقی */
+           padding:10px 20px ;
+         
+        }
+
+        /* استایل باکس‌ها */
+        .box {
+            background-color: white; /* پس‌زمینه سفید */
+            border-radius: 15px; /* گوشه‌های گرد */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* سایه زیبا */
+            text-align: center; /* متن وسط‌چین */
+            padding: 20px; /* فاصله داخلی */
+            width: 100px; /* عرض باکس */
+            height: 100px; /* ارتفاع باکس */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* انیمیشن هاور */
+        }
+
+        /* انیمیشن هنگام هاور */
+        .box:hover {
+            transform: scale(1.1); /* بزرگ شدن هنگام هاور */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* افزایش سایه */
+        }
+        
+            #footer {
+                background: linear-gradient(45deg, #1d3557, #457b9d);
+                color: #f1faee;
+                padding: 40px 20px;
+                font-family: 'Arial', sans-serif;
+          
+            
+           
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px;
+           
+            
+           
+                flex: 1 1 250px;
+                margin: 10px;
+           
+            
+                text-align: left;
+            
+           
+                line-height: 1.6;
+           
+            
+           
+                list-style: none;
+                padding: 0;
+           
+            
+          
+                margin: 8px 0;
+           
+            
+         
+                text-decoration: none;
+                color: #a8dadc;
+                transition: color 0.3s ease;
+          
+            
+            
+                color: #f1faee;
+          
+            
+           
+                display: flex;
+                gap: 10px;
+            
+            
+           
+                font-size: 20px;
+                color: #f1faee;
+                background: #457b9d;
+                padding: 10px;
+                border-radius: 50%;
+                text-align: center;
+                transition: background 0.3s ease, transform 0.3s ease;
+           
+            
+            
+                background: #f1faee;
+                color: #457b9d;
+                transform: scale(1.1);
+            
+            
+        
+                text-align: center;
+                margin-top: 20px;
+                font-size: 14px;
+                color: #a8dadc;
+            }
+            .trainer-image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+              }
+            
+
+       
+
+ 
+
+
+
